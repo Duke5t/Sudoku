@@ -1,0 +1,27 @@
+#Sudoku Solver
+#Given an array of 9 x 9 : returns whether or not the array is correct
+
+def valid_solution(board):
+    for x in board:
+        if 0 in x:
+            return False
+#check rows for duplicate numbers
+    for row in board:
+        if list(set(row)) != sorted(row):
+            return False
+#check cols for dup #s
+    for col in [list(a) for a in (zip(*board))]:
+        if list(set(col)) != sorted(col):
+            return False
+#check 3x3 for dup #s
+    a, b, c = [], [] ,[]
+    for k,x in enumerate(board,start=1):
+        a += x[0:3]
+        b += x[3:6]
+        c += x[6:9]
+        if k%3 == 0:
+            for z in [a, b, c]:
+                if list(set(z)) != sorted(z):
+                    return False
+            a,b,c = [], [] ,[]
+    return True
