@@ -1,4 +1,4 @@
-Python OOP Sudoku project with built in sudoku problem sets (not generated)
+Python OOP Sudoku application with built in sudoku problem sets (not generated)
 
 This program allows the user to solve sudoku themselves, and check their sol'n; allows the user to see the sol'n instantly; brute force sol'n; logical sol'n.
 
