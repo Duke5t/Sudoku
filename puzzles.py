@@ -3,7 +3,7 @@ import pandas as pd
 import copy
 import csv
 
-puzzle_file = 'C:\Code\Sudoku1.1\sudoku\sudoku.csv'
+puzzle_file = 'C:\Code\Sudoku1.2\sudoku.csv'
 file = open(puzzle_file, 'r')
 puzzle_raw = list(csv.reader(file, delimiter=','))
 file.close()
